@@ -15,6 +15,9 @@ Template.entrySignUp.helpers
       'USERNAME_AND_OPTIONAL_EMAIL',
       'USERNAME_ONLY'], fields)
 
+  userNameAutoFocus: ->
+    "autofocus" if Template.entrySignUp.helpers['showUsername']
+
   showSignupCode: ->
     AccountsEntry.settings.showSignupCode
 
